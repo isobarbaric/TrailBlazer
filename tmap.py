@@ -27,3 +27,10 @@ class Map:
                     self.img[i, j, 2]
                 )
         return height_map
+
+    def get_elevation_at_coordinates(self, x, y):
+
+        if 0 <= x < self.height and 0 <= y < self.width:
+            return self.height_map[x][y]
+        else:
+            return None
